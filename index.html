@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>index.html</title>
+
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="css/site.css" />
+		<style type="text/css">
+			.mui-bar-tab~.mui-content {
+				padding-bottom: 0px;
+			}
+
+			.mui-bar-nav~.mui-content {
+				padding-top: 0px;
+			}
+
+			#app {
+				position: absolute;
+				width: 100%;
+				height: calc(100vh - 94px);
+				height: -moz-calc(100vh - 94px);
+				height: -webkit-calc(100vh - 94px);
+				top: 44px;
+				left: 0px;
+				overflow: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="" id="app">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">index.html</h1>
+			</header>
+			<nav class="mui-bar mui-bar-tab">
+				<a class="mui-tab-item mui-active">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item">
+					<span class="mui-icon mui-icon-phone"></span>
+					<span class="mui-tab-label">电话</span>
+				</a>
+				<a class="mui-tab-item">
+					<span class="mui-icon mui-icon-email"></span>
+					<span class="mui-tab-label">邮件</span>
+				</a>
+				<a class="mui-tab-item">
+					<span class="mui-icon mui-icon-gear"></span>
+					<span class="mui-tab-label">设置</span>
+				</a>
+			</nav>
+			<div class="mui-content">
+				<button type="button" v-on:tap="ChangeForCount">ChangeForCount</button>
+				<p v-for="(item,index) in ForCount">{{index}}.{{item}}</p>
+			</div>
+		</div>
+
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init({});
+			mui.ready(function() {
+				console.log('%s %o %o', 'mui.ready', arguments, this);
+			});
+			mui.plusReady(function() {
+				console.log('%s %o %o', 'mui.plusReady', arguments, this);
+				var app = new Vue({
+					el: '#app',
+					customOption: {},
+					data: {
+						ForCount: 40
+					},
+					beforeCreate: function() {
+						console.log('%s %o %o', 'beforeCreate', arguments, this);
+					},
+					created: function() {
+						console.log('%s %o %o', 'created', arguments, this);
+					},
+					beforeMount: function() {
+						console.log('%s %o %o', 'beforeMount', arguments, this);
+					},
+					mounted: function() {
+						console.log('%s %o %o', 'mounted', arguments, this);
+					},
+					beforeUpdate: function() {
+						console.log('%s %o %o', 'beforeUpdate', arguments, this);
+					},
+					updated: function() {
+						console.log('%s %o %o', 'updated', arguments, this);
+					},
+					beforeDestroy: function() {
+						console.log('%s %o %o', 'beforeDestroy', arguments, this);
+					},
+					destroyed: function() {
+						console.log('%s %o %o', 'destroyed', arguments, this);
+					},
+					methods: {
+						ChangeForCount: function(customEvent) {
+							console.log('%s %o %o', 'methods.ChangeForCount', arguments, this);
+							app.ForCount = 45;
+							mui.later(function() {
+								app.$destroy();
+							}, 2000);
+						}
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

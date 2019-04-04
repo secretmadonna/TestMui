@@ -1,0 +1,40 @@
+html{font-size: 32px;}
+body{font-size:1rem;line-height: 1;}
+/*字号*/
+.fs-3-125{font-size: 3.125rem;}
+.fs-2-25{font-size: 2.25rem;}
+.fs-1-125{font-size: 1.125rem;}
+.fs-1-0625{font-size: 1.0625rem;}
+.fs-1{font-size: 1rem;}
+.fs-0-9375{font-size: 0.9375rem;}
+.fs-0-875{font-size: 0.875rem;}
+.fs-0-8125{font-size: 0.8125rem;}
+.fs-0-75{font-size: 0.75rem;}
+.fs-0-625{font-size: 0.625rem;}
+/*行高*/
+.lh-3-125{line-height: 3.125rem;}
+.lh-2-25{line-height: 2.25rem;}
+.lh-1-125{line-height: 1.125rem;}
+.lh-1-0625{line-height: 1.0625rem;}
+.lh-1{line-height: 1rem;}
+.lh-0-9375{line-height: 0.9375rem;}
+.lh-0-875{line-height: 0.875rem;}
+.lh-0-8125{line-height: 0.8125rem;}
+.lh-0-75{line-height: 0.75rem;}
+.lh-0-625{line-height: 0.625rem;}
+/*颜色*/
+.color-55a856{color: #55a856;}
+.color-ffa509{color: #ffa509;}
+.color-ff4444{color: #ff4444;}
+.color-000000{color: #000000;}
+.color-333333{color: #333333;}
+.color-444444{color: #444444;}
+.color-666666{color: #666666;}
+.color-999999{color: #999999;}
+.color-bababa{color: #bababa;}
+.color-ffffff{color: #ffffff;}
+/*背景色*/
+.bgc-55a856{background-color: #55a856;}
+.bgc-f8f8f8{background-color: #f8f8f8;}
+.bgc-eeeeee{background-color: #eeeeee;}
+.bgc-ffffff{background-color: #ffffff;}
